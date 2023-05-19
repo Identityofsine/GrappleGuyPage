@@ -1,0 +1,23 @@
+#grapple-guy-navbar{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap:.5vw;
+        .logo-text-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+    }
+}
