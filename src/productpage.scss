@@ -1,0 +1,87 @@
+@import './assets/fonts/futura/futura.scss';
+
+section.gg-product-page{
+    position: relative;
+    width: 100%;
+    // height: 52vh;
+    $marginLeft: 1.5vw;
+    .gg-product-page-image{
+        position: relative;
+        float: left;
+        padding-right: 1.5vw;
+        img{
+            width: 30vw;
+            aspect-ratio: 561 / 639;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), calc(100% - 6vw) 100%, 0 100%);
+        }
+        span{
+            position: absolute;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.55vw;
+            line-height: 153.5%;
+            /* or 52px */
+
+            color: #FE6D73;
+
+            transform: rotate(-45deg);
+            z-index: 2;
+            bottom:2.3vw;
+            right:0.15vw;
+            
+        }
+        padding-bottom: 1.5vh;
+    }
+    .gg-product-page-title{
+        overflow: hidden; /* Added to contain floated elements */
+        float: left;
+        text-align: left;
+        // margin-left: $marginLeft;
+        transform: translateY(-12%);
+        display: block;
+        h2 {
+          margin: 0;
+          font-family: 'Futura PT';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 4.8vw;
+          line-height: 100%;
+        }
+    
+        ggred {
+          color: #fe6d73 !important;
+        }
+    
+        span {
+          display: block;
+          text-align: left;
+          font-family: 'Libre Franklin';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1.2vw;
+          line-height: 100%;
+          margin: 0;
+          opacity: .74;
+
+
+        }
+    }
+    p{
+        // clear: both; /* Added to clear floats */
+        text-align: left;
+        font-family: 'Libre Franklin';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 100%;
+        margin: 0;
+        transition: 1250ms line-height, 1250ms opacity;
+
+        opacity: 0;
+        &.show{
+            line-height: 160%;
+            opacity: 1;
+        }
+    }
+}

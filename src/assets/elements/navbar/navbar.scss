@@ -1,23 +1,45 @@
+
+
+@import "../../fonts/futura/futura.scss";
+
 #grapple-guy-navbar{
     position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
+    top:2vh;
+    left:50%;
+    transform: translate(-50%, 0);
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+    text-align: left;
 
     .logo{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        gap:.5vw;
+        gap:.8vw;
+        .logo-placeholder{
+            width: 5vw;
+            height: 5vw;
+            background-color: #fef3ef;
+        }
         .logo-text-container{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: flex-start;
             flex-direction: column;
+            gap:.25vh;
+            h2{
+                text-align: left;
+                margin: 0;
+                font-size: 1.7vw;
+                line-height: 100%;
+                font-family: 'Futura';
+            }
+            span{
+                display: block;
+                font-size: .7vw;
+            }
         }
     }
 }
