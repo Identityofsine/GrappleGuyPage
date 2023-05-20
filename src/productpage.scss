@@ -1,4 +1,7 @@
+@import './var/var.scss';
 @import './assets/fonts/futura/futura.scss';
+
+
 
 section.gg-product-page{
     position: relative;
@@ -34,6 +37,7 @@ section.gg-product-page{
         padding-bottom: 1.5vh;
     }
     .gg-product-page-title{
+        position: relative;
         overflow: hidden; /* Added to contain floated elements */
         float: left;
         text-align: left;
@@ -50,7 +54,20 @@ section.gg-product-page{
         }
     
         ggred {
-          color: #fe6d73 !important;
+            position: relative;
+            color: #fe6d73 !important;
+        }
+        .gg-product-red-bar{
+            position: absolute;
+            width: 45%;
+            height: 0vh;
+            background-color: $accent;
+            bottom: 2.4vh;
+            right: 0;
+            transition: 800ms height;
+            &.show{
+                height: 0.8vh;
+            }
         }
     
         span {
@@ -73,15 +90,48 @@ section.gg-product-page{
         font-family: 'Libre Franklin';
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 1.6vw;
         line-height: 100%;
         margin: 0;
         transition: 1250ms line-height, 1250ms opacity;
-
         opacity: 0;
+
         &.show{
             line-height: 160%;
             opacity: 1;
+        }
+    }
+    .gg-product-purchase{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap:1vh;
+        margin-top: 2%;
+        margin-left: 90%;
+        cursor: pointer;
+        transition: 900ms transform;
+        img{
+            width: 2.9vw;
+            aspect-ratio: 77.25 / 80.25;
+            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(40%) contrast(100%);
+            transition: 850ms all;
+            user-select: none;
+        }
+        span{
+            color:$accent;
+            font-weight: 700;
+            font-size: 1.15vw;
+            user-select: none;
+        }
+        &:hover{
+            transform: scale(1.08);
+            img{
+                filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(140%) contrast(100%);
+            }
+        }
+        &:active{
+            transform: scale(.9);
         }
     }
 }
