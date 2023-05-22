@@ -8,6 +8,7 @@ section.gg-product-page{
     width: 100%;
     // height: 52vh;
     $marginLeft: 1.5vw;
+    margin-top: 12vh;
     .gg-product-page-image{
         position: relative;
         float: left;
@@ -48,9 +49,11 @@ section.gg-product-page{
           margin: 0;
           font-family: 'Futura PT';
           font-style: normal;
-          font-weight: 600;
-          font-size: 4.8vw;
+          font-weight: 700;
+          font-size: 4.4vw;
           line-height: 100%;
+          color:black;
+
         }
     
         ggred {
@@ -75,11 +78,14 @@ section.gg-product-page{
           text-align: left;
           font-family: 'Libre Franklin';
           font-style: normal;
-          font-weight: 300;
+          font-weight: 400;
           font-size: 1.2vw;
           line-height: 100%;
           margin: 0;
-          opacity: .74;
+          opacity: .5;
+          background:$textlinear;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
 
 
         }
@@ -90,48 +96,205 @@ section.gg-product-page{
         font-family: 'Libre Franklin';
         font-style: normal;
         font-weight: 600;
-        font-size: 1.6vw;
+        font-size: 2vw;
         line-height: 100%;
         margin: 0;
         transition: 1250ms line-height, 1250ms opacity;
         opacity: 0;
-
+        background:$textlinear;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         &.show{
             line-height: 160%;
             opacity: 1;
         }
     }
-    .gg-product-purchase{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap:1vh;
-        margin-top: 2%;
-        margin-left: 90%;
-        cursor: pointer;
-        transition: 900ms transform;
-        img{
-            width: 2.9vw;
-            aspect-ratio: 77.25 / 80.25;
-            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(40%) contrast(100%);
-            transition: 850ms all;
-            user-select: none;
+   
+}
+
+section.gg-product-ingredients{
+    margin-top: 100.5px;
+    h2{
+        position: relative;
+        width: fit-content;
+        margin: 0;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.8vw;
+        line-height: 100%;
+        color:black;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 99%;
+            height: 0.8vh;
+            left:50%;
+            transform: translateX(-50%);
+            bottom:-.4vh;
+            background-color: #fe6d73;
         }
-        span{
-            color:$accent;
-            font-weight: 700;
-            font-size: 1.15vw;
-            user-select: none;
-        }
-        &:hover{
-            transform: scale(1.08);
+    }
+    .gg-product-container{
+        margin-top: 2vh;
+        .gg-product-image-container{
+            float: left;
             img{
-                filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(140%) contrast(100%);
+                width: 613px;
+                height: 632px;
             }
         }
-        &:active{
-            transform: scale(.9);
+        .gg-product-body{
+            position: relative;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 2.75vh;
+            padding-left: 37px;
+            span.gg-body{
+                font-family: 'Libre Franklin';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 34px;
+                line-height: 153.5%;
+                text-align: left;
+                background:$textlinear;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .gg-product-body-bullet-container{
+                width: 100%;
+                .gg-product-body-bullets{
+                    display: grid;
+                    grid-template-rows: repeat(2, 10fr);  /* Two rows with equal height */
+                    grid-template-columns: repeat(3, 1fr);  /* Three columns with equal width */
+                    gap: 23px;  /* Gap between grid items */
+                }
+            }
         }
+    }
+}
+
+section.gg-product-about {
+    .gg-product-about-title{
+        h2 {
+            width: fit-content;
+            margin: 0;
+            font-family: 'Futura PT';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 4.4vw;
+            line-height: 100%;
+            color:black;
+          }
+          ggred {
+              position: relative;
+              color: #fe6d73 !important;
+          }
+    }
+    .gg-product-about-container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .gg-product-about-image{
+        float:left;
+        img{
+            width: 512px;
+            height: 505px;
+        }
+    }
+    .gg-product-about-body{
+        position: relative;
+
+        h2{
+            width: fit-content;
+            position: relative;
+            font-family: 'Futura PT';
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            margin: 0;
+            font-size: 67px;
+            text-align: left;
+            .gg-product-about-accentline{
+                position: absolute;
+                height: 11px;
+                width: 100%;
+                background-color: #fe6d73;
+                left:0;
+            }
+        }
+        p{
+            text-align: left;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 171.5%;
+            background:$textlinear;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin:0;
+            margin-top: 2.25vh;
+        }
+    }
+}
+
+.gg-bullet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    span{
+        display: inline-block;
+        position: relative;
+        font-family: 'Libre Franklin';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 153.5%;
+    }
+    .gg-bullet-block{
+        width: 25px;
+        height: 25px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #000000;
+    }
+}
+
+.gg-product-purchase{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap:1vh;
+    margin-top: 2%;
+    margin-left: 90%;
+    cursor: pointer;
+    transition: 900ms transform;
+    img{
+        width: 4vw;
+        aspect-ratio: 77.25 / 80.25;
+        filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(40%) contrast(100%);
+        transition: 850ms all;
+        user-select: none;
+    }
+    span{
+        color:$accent;
+        font-weight: 700;
+        font-size: 1.4vw;
+        user-select: none;
+    }
+    &:hover{
+        transform: scale(1.08);
+        img{
+            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(140%) contrast(100%);
+        }
+    }
+    &:active{
+        transform: scale(.9);
     }
 }

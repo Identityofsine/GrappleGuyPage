@@ -1,8 +1,15 @@
 #root {
-  padding: 1vw;
+  padding: 2vw;
   text-align: center;
 }
 
 section {
-  margin-top: 12vh;
+  // margin-top: 12vh;
+}
+
+.gg-app-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
