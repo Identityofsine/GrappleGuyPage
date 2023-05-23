@@ -169,7 +169,7 @@ const MoreSection = () => {
             </div>
             <div className='gg-product-content'>
                 <div className='gg-product-card'>
-                    <img src='/images/dummy1.png' alt='arrow'/>
+                    <img src='/images/dummy1.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2>Our Rash guards</h2>
                         <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
@@ -181,13 +181,13 @@ const MoreSection = () => {
                     </div>
                 </div>
                 <div className='gg-product-card'>
-                    <img src='/images/dummy2.png' alt='arrow'/>
+                    <img src='/images/dummy2.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2><ggred>GG</ggred>&apos;s Workout Plan</h2>
                         <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
                         <div className='gg-product-purchase'>
                             <img src='/images/arrow.svg' alt='arrow'
-                                draggable={false}/>
+                                draggable={false} />
                             <span>Check It Out</span>
                         </div>
                     </div>

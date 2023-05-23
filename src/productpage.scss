@@ -459,6 +459,10 @@ section.gg-product-more-section{
             display: flex;
             gap:5.75vh;
             position: relative;
+            img.icon{
+                width:22.55vw;
+                height: 34.62vh;
+            }
             .gg-product-card-body{
                 display: flex;
                 align-items: flex-start;
@@ -501,9 +505,10 @@ section.gg-product-more-section{
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     opacity: .85;
-                    margin-top: 2.5vh;
+                    margin-top: 1.2vh;
                 }
                 .gg-product-purchase{
+                    margin-top: 0;
                     margin-left: auto;
                 }
             }
