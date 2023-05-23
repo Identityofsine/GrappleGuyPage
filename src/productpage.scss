@@ -435,6 +435,7 @@ section.gg-product-more-section{
     flex-direction: column;
     align-items: flex-start;
     .gg-product-more-title{
+        position: relative;
         h2{
             font-family: 'Futura PT';
             font-style: normal;
@@ -471,6 +472,22 @@ section.gg-product-more-section{
             -webkit-text-fill-color: transparent;
             opacity: .8;
             margin-top: 2vh;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% + 4vh);
+            background: $bglinear;
+            transition: $animspeed height;
+            z-index: 2;
+            left:0;
+            bottom:0vh;
+        }
+        &.show{
+            &::after{
+                height:0;
+            }
         }
     }
     .gg-product-content{

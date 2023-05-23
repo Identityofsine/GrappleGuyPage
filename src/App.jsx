@@ -162,7 +162,7 @@ export const AboutBlock = () => {
 const MoreSection = () => {
     return (
         <section className='gg-product-more-section'>
-            <div className='gg-product-more-title'>
+            <div className='gg-product-more-title _B'>
                 <h2>MORE <ggred>GG</ggred></h2>
                 <span>We offer more options ranging from Rash guards to workout plans.</span>
             </div>
