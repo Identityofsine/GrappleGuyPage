@@ -91,7 +91,7 @@ section.gg-product-page{
             width: 45%;
             height: 0vh;
             background-color: $accent;
-            bottom: 2.4vh;
+            bottom: 1.8vh;
             right: 0;
             transition: $animspeed height;
             &.show{
@@ -240,6 +240,8 @@ section.gg-product-ingredients{
 section.gg-product-about {
     margin-top:$sectionmargin;
     .gg-product-about-title{
+        position: relative;
+        width: fit-content;
         h2 {
             width: fit-content;
             margin: 0;
@@ -249,6 +251,7 @@ section.gg-product-about {
             font-size: 4.4vw;
             line-height: 100%;
             color:black;
+            position: relative;
           }
           ggred {
               position: relative;
@@ -266,6 +269,22 @@ section.gg-product-about {
                 background: $accent;
               }
           }
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% + .4vh);
+            background: $bglinear;
+            transition: $animspeed / 1.2 width;
+            z-index: 4;
+            left:0;
+            bottom:-.4vh;
+            }
+            &.show{
+                &::after{
+                    width:0;
+                }
+            }
     }
     .gg-product-about-container{
         display: flex;
@@ -350,6 +369,7 @@ section.gg-product-about {
                 background-color: $accent;
                 left:0;
             }
+            
         }
         p{
             text-align: left;
@@ -357,12 +377,18 @@ section.gg-product-about {
             font-style: normal;
             font-weight: 600;
             font-size: 1.615vw;
-            line-height: 171.5%;
+            line-height: 0%;
+            opacity: 0;
             background:$textlinear;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin:0;
             margin-top: 2.25vh;
+            transition: 800ms line-height, 800ms opacity;
+            &.show{
+                line-height: 171.5%;
+                opacity: 1;
+            }
         }
         .gg-prdouct-about-accentline-body{
             width: 100%;
@@ -457,7 +483,7 @@ section.gg-product-more-section{
 
         .gg-product-card{
             display: flex;
-            gap:5.75vh;
+            gap:3.8vh;
             position: relative;
             img.icon{
                 width:22.55vw;
@@ -530,6 +556,7 @@ section.gg-product-more-section{
         font-weight: 500;
         font-size: 1.4vw;
         line-height: 153.5%;
+        opacity: .7;
     }
     .gg-bullet-block{
         width: 1.30vw;
@@ -565,7 +592,7 @@ section.gg-product-more-section{
     &:hover{
         transform: scale(1.08);
         img{
-            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(140%) contrast(100%);
+            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(170deg) brightness(20%) contrast(100%);
         }
     }
     &:active{

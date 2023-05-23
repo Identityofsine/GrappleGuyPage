@@ -114,9 +114,8 @@ export const Ingredients = () => { // temporarily used, only for pages that cont
 export const AboutBlock = () => {
     return (
         <section className='gg-product-about'>
-            <div className='gg-product-about-title'>
-                <h2>About
-                    <ggred>GG</ggred>
+            <div className='gg-product-about-title _B'>
+                <h2>ABOUT <ggred>GG</ggred>
                 </h2>
             </div>
             <div className='gg-product-about-container'>
@@ -131,7 +130,7 @@ export const AboutBlock = () => {
                         Our Brand
                         <div className='gg-product-about-accentline'/>
                     </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus.
+                    <p className='_B'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus.
                     </p>
                     <div className='gg-prdouct-about-accentline-body'/>
 
@@ -164,7 +163,7 @@ const MoreSection = () => {
     return (
         <section className='gg-product-more-section'>
             <div className='gg-product-more-title'>
-                <h2>More <ggred>GG</ggred></h2>
+                <h2>MORE <ggred>GG</ggred></h2>
                 <span>We offer more options ranging from Rash guards to workout plans.</span>
             </div>
             <div className='gg-product-content'>
