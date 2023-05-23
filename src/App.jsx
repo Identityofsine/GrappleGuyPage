@@ -1,7 +1,7 @@
 import './App.scss'
 import './productpage.scss'
 import NavBar from './assets/elements/navbar/navbar'
-import {useEffect, useRef} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import useAnimationHook from './hook/animhook'
 import LineSeperator from './assets/elements/line-seperate/line-seperate'
 
@@ -22,21 +22,26 @@ export const ProductSection = () => {
             style={
                 {minHeight: '40vh'}
         }>
-            <div className='gg-product-page-image'>
-                <img src='/images/example-sup-picture.png' alt='Icon'/>
-                <span>$65.99*</span>
+            <div className='gg-product-section-page-container'>
+                <div className='gg-product-page-image _A'>
+                    <img src='/images/example-sup-picture.png' alt='Icon'/>
+                    <span>$65.99*</span>
+                </div>
+                <div className='gg-product-page-content'>
+                    <div className='gg-product-page-title'>
+                        <h2>
+                            <ggred>GRAPPLE GUY’S </ggred>
+                            CUTTING MIX
+                            <span>2nd Revision</span>
+                        </h2>
+                        <div className='gg-product-red-bar _B'/>
+                    </div>
+                    <p className='_B'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Duis est metus, laoreet sit amet lectus vel, porta consectetur magna. Pellentesque lobortis scelerisque arcu quis pulvinar. Aenean feugiat pellentesque quam, non mollis ipsum viverra ut. Suspendisse sed nunc sapien.
+                    </p>
+                </div>
+
             </div>
-            <div className='gg-product-page-title'>
-                <h2>
-                    <ggred>GRAPPLE GUY’S</ggred>
-                    CUTTING MIX
-                    <span>2nd Revision</span>
-                </h2>
-                <div className='gg-product-red-bar _B'/>
-            </div>
-            <p className='_B'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Duis est metus, laoreet sit amet lectus vel, porta consectetur magna. Pellentesque lobortis scelerisque arcu quis pulvinar. Aenean feugiat pellentesque quam, non mollis ipsum viverra ut. Suspendisse sed nunc sapien.
-            </p>
             <div className='gg-product-purchase'
                 draggable={false}>
                 <img src='/images/arrow.svg' alt='arrow'
@@ -63,19 +68,19 @@ export const Bullet = ({
 
 
 export const Ingredients = () => { // temporarily used, only for pages that contain ingredients, some pages don't contain ingredients such as rashguards...
-
+    const [animateBullets, setAnimateState] = useState(false);
     return (
         <section className='gg-product-ingredients'>
-            <h2>INGREDIENTS</h2>
+            <h2 className='_A'>INGREDIENTS</h2>
             <div className='gg-product-container'>
                 <div className='gg-product-image-container'>
                     <img src="/images/supfacts.png" alt='Nutrition Facts'/>
                 </div>
                 <div className='gg-product-body'>
-                    <span className='gg-body'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque</span>
+                    <span className='gg-body _B'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque</span>
                     <div className='gg-product-body-bullet-container'>
-                        <LineSeperator text='SUMMED UP'/>
-                        <div className='gg-product-body-bullets'>
+                        <LineSeperator text='SUMMED UP' animated={{animate:true,onetimeonly:true}} onTransitionEnd={() => {setAnimateState(true)}}/>
+                        <div className={`gg-product-body-bullets ${animateBullets ? 'show' : ''}`}>
                             <Bullet text='Lorem Ipsum'/>
                             <Bullet text='Lorem Ipsum'/>
                             <Bullet text='Lorem Ipsum'/>
@@ -95,13 +100,15 @@ export const AboutBlock = () => {
     return (
         <section className='gg-product-about'>
             <div className='gg-product-about-title'>
-                <h2>About
-                    <ggred>GG</ggred>
+                <h2>About <ggred>GG</ggred>
                 </h2>
             </div>
             <div className='gg-product-about-container'>
-                <div className='gg-product-about-image'>
-                    <img src='/images/GG_LOGO.svg' alt="grappleguy"/>
+                <div className='gg-product-about-image-frame _B'>
+                    <img src='/images/graappleguy_man.svg' alt="grappleguy" className='main-gg'/>
+                    <img src='/images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg left'/>
+                    <img src='/images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg right'/>
+
                 </div>
                 <div className='gg-product-about-body'>
                     <h2>
@@ -113,7 +120,17 @@ export const AboutBlock = () => {
                     <div className='gg-prdouct-about-accentline-body'/>
 
                     <div className='gg-product-about-bullet-container'>
-                        <div className='gg-product-about-bullets'></div>
+                        <div className='gg-product-about-bullets'>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Lorem ipsum dolor sit amet'/>
+
+                        </div>
                         <div className='gg-product-purchase'>
                             <img src='/images/arrow.svg' alt='arrow'
                                 draggable={false}/>
@@ -140,6 +157,8 @@ function App() {
             <LineSeperator text="INGREDIENTS"
                 right={true}/>
             <AboutBlock/>
+            <LineSeperator text="GRAPPLEGUY"
+                right={false}/>
         </div>
     )
 }

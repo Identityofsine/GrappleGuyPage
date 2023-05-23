@@ -10,7 +10,7 @@
         font-family: 'Libre Franklin';
         font-style: normal;
         font-weight: 900;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #fe6d73;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), #fe6d73;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 1;
@@ -23,5 +23,24 @@
         height: .7vh;
         background-color: $linedark;
         opacity: .9;
+    }
+    &._A, &._B{
+        &::before{
+            content: "";
+            position: absolute;
+            background:$bglinear;
+            width: 100%;
+            height: calc(100% + 0vh);
+            bottom:0;
+            left: 0;
+            transition: $animspeed height;
+            transition-delay: 300ms;
+            z-index: 4;
+        }
+        &.show{
+            &::before{
+                height: 0%;
+            }
+        }
     }
 }

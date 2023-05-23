@@ -9,10 +9,14 @@ section.gg-product-page{
     // height: 52vh;
     $marginLeft: 1.5vw;
     margin-top: 12vh;
+    
+    .gg-product-section-page-container{
+        display: flex;
+    }
     .gg-product-page-image{
         position: relative;
-        float: left;
         padding-right: 1.5vw;
+        z-index: 1;
         img{
             width: 30vw;
             aspect-ratio: 561 / 639;
@@ -27,7 +31,7 @@ section.gg-product-page{
             line-height: 153.5%;
             /* or 52px */
 
-            color: #FE6D73;
+            color: $accent;
 
             transform: rotate(-45deg);
             z-index: 2;
@@ -36,6 +40,28 @@ section.gg-product-page{
             
         }
         padding-bottom: 1.5vh;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom:0;
+            left:0;
+            z-index: 3;
+            background: $bglinear;
+            transition: $animspeed / 1.25 width, $animspeed height, $animspeed border-top-right-radius, $animspeed border-top-left-radius;
+            transition-timing-function: ease-in-out;
+            border-top-right-radius: 0%;
+            border-top-left-radius: 0%;
+
+        }
+        &.show{
+            &::before{
+                width: 0;
+            }
+        }
+        
     }
     .gg-product-page-title{
         position: relative;
@@ -58,7 +84,7 @@ section.gg-product-page{
     
         ggred {
             position: relative;
-            color: #fe6d73 !important;
+            color: $accent !important;
         }
         .gg-product-red-bar{
             position: absolute;
@@ -67,7 +93,7 @@ section.gg-product-page{
             background-color: $accent;
             bottom: 2.4vh;
             right: 0;
-            transition: 800ms height;
+            transition: $animspeed height;
             &.show{
                 height: 0.8vh;
             }
@@ -99,7 +125,7 @@ section.gg-product-page{
         font-size: 2vw;
         line-height: 100%;
         margin: 0;
-        transition: 1250ms line-height, 1250ms opacity;
+        transition: $animspeed line-height, $animspeed opacity;
         opacity: 0;
         background:$textlinear;
         -webkit-background-clip: text;
@@ -113,7 +139,7 @@ section.gg-product-page{
 }
 
 section.gg-product-ingredients{
-    margin-top: 100.5px;
+    margin-top: $sectionmargin;
     h2{
         position: relative;
         width: fit-content;
@@ -123,6 +149,7 @@ section.gg-product-ingredients{
         font-weight: 700;
         font-size: 4.8vw;
         line-height: 100%;
+        z-index: 0;
         color:black;
         &::before{
             content: '';
@@ -132,16 +159,37 @@ section.gg-product-ingredients{
             left:50%;
             transform: translateX(-50%);
             bottom:-.4vh;
-            background-color: #fe6d73;
+            background-color: $accent;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: calc(100% + .4vh);
+            background: $bglinear;
+            transition: $animspeed width;
+            z-index: 2;
+            left:0;
+            bottom:-.4vh;
+        }
+        &.show{
+            &::after{
+                width:0;
+            }
         }
     }
     .gg-product-container{
-        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        margin-top: 3.5vh;
+        align-items: flex-start;
+        justify-content: flex-start;
+
         .gg-product-image-container{
             float: left;
             img{
-                width: 613px;
-                height: 632px;
+                width: 31.927vw;
+                height: 58.51vh;
             }
         }
         .gg-product-body{
@@ -149,28 +197,40 @@ section.gg-product-ingredients{
             width: fit-content;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             flex-direction: column;
-            gap: 2.75vh;
-            padding-left: 37px;
+            height: 100%;
+            padding-left: 2.4vw;
             span.gg-body{
                 font-family: 'Libre Franklin';
                 font-style: normal;
                 font-weight: 600;
-                font-size: 34px;
+                font-size: 1.8vw;
                 line-height: 153.5%;
                 text-align: left;
                 background:$textlinear;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: $animspeed opacity;
+                &.show{
+                    opacity: 1;
+                }
             }
             .gg-product-body-bullet-container{
                 width: 100%;
+                margin-top: auto;
                 .gg-product-body-bullets{
+                    margin-top: 2vh;
                     display: grid;
                     grid-template-rows: repeat(2, 10fr);  /* Two rows with equal height */
                     grid-template-columns: repeat(3, 1fr);  /* Three columns with equal width */
-                    gap: 23px;  /* Gap between grid items */
+                    gap: 3vh;  /* Gap between grid items */
+                    opacity: 0;
+                    transition: $animspeed / 2 opacity;
+                    &.show{
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -178,6 +238,7 @@ section.gg-product-ingredients{
 }
 
 section.gg-product-about {
+    margin-top:$sectionmargin;
     .gg-product-about-title{
         h2 {
             width: fit-content;
@@ -191,7 +252,19 @@ section.gg-product-about {
           }
           ggred {
               position: relative;
-              color: #fe6d73 !important;
+              color: $accent !important;
+              line-height: 100%;
+
+              &::before{
+                content: "";
+                position: absolute;
+                bottom:1.4vh;
+                height: .7vh;
+                left:50%;
+                transform:translateX(-50%);
+                width:97%;
+                background: $accent;
+              }
           }
     }
     .gg-product-about-container{
@@ -199,12 +272,62 @@ section.gg-product-about {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: row;
+        gap:2vh;
+        margin-top: 5.5vh;
     }
-    .gg-product-about-image{
-        float:left;
+    .gg-product-about-image-frame{
+        width: 28vw;
+        height: 54.75vh;
+        padding: 0 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
         img{
-            width: 512px;
-            height: 505px;
+            width: 25vw;
+            height: 55vh;
+        }
+        img.main-gg{
+            position: relative;
+            transition: 750ms transform;
+            &:hover{
+                transform: scale(1.1);
+            }
+
+        }
+        img.alt-gg{
+            position: absolute;
+            bottom:0;
+            left:50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            transition: 700ms left, 700ms filter, 700ms transform;
+            &.left, &.right{
+                left:50%;
+                filter:blur(0);
+            }
+        }
+        &.show{
+            img.main-gg{
+                transform: scale(1.08);
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            img.alt-gg{
+                &.left{
+                    left:28%;
+                    
+                }
+                &.right{
+                    left:72%;
+                }
+                &.left,&.right{
+                    filter:blur(4px);
+                    transform: translateX(-50%) scale(0.92);
+                }
+            }
         }
     }
     .gg-product-about-body{
@@ -218,13 +341,13 @@ section.gg-product-about {
             font-weight: 600;
             line-height: 100%;
             margin: 0;
-            font-size: 67px;
+            font-size: 3.6vw;
             text-align: left;
             .gg-product-about-accentline{
                 position: absolute;
-                height: 11px;
-                width: 100%;
-                background-color: #fe6d73;
+                height: .7vh;
+                width: 170%;
+                background-color: $accent;
                 left:0;
             }
         }
@@ -233,13 +356,49 @@ section.gg-product-about {
             font-family: 'Libre Franklin';
             font-style: normal;
             font-weight: 600;
-            font-size: 30px;
+            font-size: 1.615vw;
             line-height: 171.5%;
             background:$textlinear;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin:0;
             margin-top: 2.25vh;
+        }
+        .gg-prdouct-about-accentline-body{
+            width: 100%;
+            height: .7vh;
+            background-color: $accent;
+            opacity: .7;
+            margin-top: 2.1vh;
+        }
+        .gg-product-about-bullet-container{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            position: relative;
+            .gg-product-about-bullets{
+                margin-top: 2vh;
+                display: grid;
+                grid-template-rows: repeat(4, 2fr);  /* Two rows with equal height */
+                grid-template-columns: repeat(2, 2fr);  /* Three columns with equal width */
+                gap: 23px;  /* Gap between grid items */
+                justify-items: start;
+                // width: 40%;
+
+            }
+            .gg-product-purchase{
+                margin:0;
+                width: fit-content;
+                margin-right: 5vh;
+                img{
+                    width: 5vw;
+                }
+                span{
+                    font-size: 2vw;
+                    opacity: .8;
+                }
+            }
         }
     }
 }
@@ -255,12 +414,13 @@ section.gg-product-about {
         font-family: 'Libre Franklin';
         font-style: normal;
         font-weight: 500;
-        font-size: 28px;
+        font-size: 1.4vw;
         line-height: 153.5%;
     }
     .gg-bullet-block{
-        width: 25px;
-        height: 25px;
+        width: 1.30vw;
+        height: auto;
+        aspect-ratio: 1;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #000000;
     }
 }
