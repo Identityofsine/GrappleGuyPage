@@ -1,0 +1,23 @@
+@import "../../../breakpoints/breakpoints.scss";
+
+@include media('<=LGphone') {
+    #grapple-guy-navbar{
+        .logo{
+            gap:2.5vw;
+            .logo-placeholder{
+                width: 22vw;
+                height: auto;
+                aspect-ratio: 1;
+            }
+            .logo-text-container{
+                h2{
+                    font-size: 8vw;
+                }
+                span{
+                    font-size: 3vw;
+                    margin-left: .8vw;
+                }
+            }
+        }
+    }
+}

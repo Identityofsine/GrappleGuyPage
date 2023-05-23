@@ -1,0 +1,248 @@
+@import "./breakpoints/breakpoints.scss";
+@import "./var/var.scss";
+
+@include media('<=LGphone') {
+
+    #root{
+        overflow-x: hidden;
+    }
+
+    section{
+        margin-top: $phonesectionmargin !important;
+    }
+
+    .gg-app-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    section.gg-product-page {
+        margin-top: 15vh !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .gg-product-section-page-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gg-product-page-image {
+            padding: 0;
+
+            img {
+                width: 96vw;
+                $cutoff: 20vw;
+                clip-path: polygon(0 0, 100% 0, 100% calc(100% - $cutoff), calc(100% - $cutoff) 100%, 0 100%);
+            }
+
+            span {
+                font-size: 5vw;
+                right: -4vw;
+                bottom: 2.8vh;
+            }
+
+        }
+
+        .gg-product-page-title {
+            margin-top: .65vh;
+            transform: none;
+
+            h2 {
+                font-family: 'Futura PT';
+                font-style: normal;
+                font-size: 11vw;
+                line-height: 55px;
+            }
+
+            span {
+                // transform: translateY(1vh);
+                font-size: 4vw;
+            }
+
+            .gg-product-red-bar {
+                left: 0;
+                bottom: 2.4vh;
+                width: 73.5%;
+
+                &.show {
+                    height: .6vh;
+                }
+            }
+        }
+
+        p {
+            display: inline-block;
+            margin-top: 2vh;
+            font-size: 5vw;
+        }
+    }
+
+    section.gg-product-ingredients {
+        padding: 0 .5vw;
+
+        h2 {
+            font-size: 14vw;
+        }
+
+        .gg-product-container {
+            flex-direction: column;
+            gap: 2.2vh;
+
+            .gg-product-image-container {
+                img {
+                    width: 95vw;
+                }
+            }
+
+            .gg-product-body {
+                span.gg-body {
+                    font-size: 5vw;
+                }
+            }
+
+            .gg-product-body-bullet-container {
+                margin-top: 0;
+                margin: 0;
+
+                .gg-line-container {
+                    margin-top: 2vh;
+                }
+
+                .gg-product-body-bullets {
+                    margin-top: 3.24vh !important;
+                    display: flex !important;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 2.72vh !important;
+                }
+            }
+        }
+    }
+
+    section.gg-product-about {
+        .gg-product-about-title{
+            h2{
+                font-size: 17vw;
+                ggred{
+                    &::before{
+                        bottom:.5vh;
+                    }
+                }
+            }
+        }
+        .gg-product-about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            .gg-product-about-image-frame{
+                width: 95vw;
+                height: auto;
+                padding: 0 !important;
+                img{
+                    width: 95vw;
+                    height: 40vh;
+                }
+            }
+            .gg-product-about-body {
+                h2{
+                    font-size: 6.5vh;
+                    .gg-product-about-accentline{
+                        width: 120%;
+                    }
+                }
+                p{
+                    font-size: 5vw;
+                }
+                .gg-product-about-bullet-container {
+                    flex-direction: column;
+                    justify-content: flex-start !important;
+                    align-items: flex-start;
+                    gap:2vh;
+                    .gg-product-about-bullets {
+                        display: flex !important;
+                        flex-direction: column;
+                        gap: 2.64vh !important;
+                    }
+                }
+            }
+        }
+
+    }
+    section.gg-product-more-section{
+        margin-top: 5vh;
+        align-items: center;
+
+        .gg-product-more-title{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            h2{
+                font-size:17vw;
+                font-weight: 700;
+                ggred{
+                    &::before{
+                        bottom:.6vh;
+                    }
+                }
+            }
+            span{
+                text-align: left;
+                font-size:4vw;
+                width: 70%;
+                margin-top: .5vh;
+            }
+        }
+        .gg-product-content{
+            
+            width: 90vw;
+            .gg-product-card{
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                img.icon{
+                    width: 90vw;
+                    height: auto;
+                    aspect-ratio: 1;
+                }
+                .gg-product-card-body{
+                    padding: 0;
+                    h2{
+                        font-size: 9vw;
+                    }
+                    span.gg-pc-span{
+                        font-size: 6vw;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .gg-bullet {
+        gap:4vw;
+        span {
+            font-size: 6.5vw;
+            opacity: .9;
+        }
+
+        .gg-bullet-block {
+            width: 25px;
+        }
+    }
+    .gg-product-purchase{
+        margin: 0;
+        align-self:flex-end;
+        img{
+            width: 20vw !important;
+        }
+        span{
+            font-size: 5vw !important;
+        }
+    }
+}

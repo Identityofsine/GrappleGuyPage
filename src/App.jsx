@@ -1,5 +1,6 @@
 import './App.scss'
 import './productpage.scss'
+import './productpage_phone.scss'
 import NavBar from './assets/elements/navbar/navbar'
 import {useEffect, useRef, useState} from 'react'
 import useAnimationHook from './hook/animhook'
@@ -167,7 +168,7 @@ const MoreSection = () => {
                 <span>We offer more options ranging from Rash guards to workout plans.</span>
             </div>
             <div className='gg-product-content'>
-                <div className='gg-product-card'>
+                <div className='gg-product-card _B'>
                     <img src='/images/dummy1.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2>Our Rash guards</h2>
@@ -179,7 +180,7 @@ const MoreSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className='gg-product-card'>
+                <div className='gg-product-card _B'>
                     <img src='/images/dummy2.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2><ggred>GG</ggred>&apos;s Workout Plan</h2>

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./footer.scss"
+import "./footer_phone.scss"
 import LineSeperator from '../line-seperate/line-seperate'
 
 function Footer() {

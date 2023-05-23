@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import "./navbar.scss"
-
+import "./navbar_phone.scss"
 
 function NavBar() {
   return (
