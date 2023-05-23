@@ -4,6 +4,7 @@ import NavBar from './assets/elements/navbar/navbar'
 import {useEffect, useRef, useState} from 'react'
 import useAnimationHook from './hook/animhook'
 import LineSeperator from './assets/elements/line-seperate/line-seperate'
+import Footer from './assets/elements/footer/footer'
 
 
 export const ProductSection = () => {
@@ -30,8 +31,7 @@ export const ProductSection = () => {
                 <div className='gg-product-page-content'>
                     <div className='gg-product-page-title'>
                         <h2>
-                            <ggred>GRAPPLE GUY’S </ggred>
-                            CUTTING MIX
+                            <ggred>GRAPPLE GUY’S</ggred> CUTTING MIX
                             <span>2nd Revision</span>
                         </h2>
                         <div className='gg-product-red-bar _B'/>
@@ -79,8 +79,23 @@ export const Ingredients = () => { // temporarily used, only for pages that cont
                 <div className='gg-product-body'>
                     <span className='gg-body _B'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque</span>
                     <div className='gg-product-body-bullet-container'>
-                        <LineSeperator text='SUMMED UP' animated={{animate:true,onetimeonly:true}} onTransitionEnd={() => {setAnimateState(true)}}/>
-                        <div className={`gg-product-body-bullets ${animateBullets ? 'show' : ''}`}>
+                        <LineSeperator text='SUMMED UP'
+                            animated={
+                                {
+                                    animate: true,
+                                    onetimeonly: true
+                                }
+                            }
+                            onTransitionEnd={
+                                () => {
+                                    setAnimateState(true)
+                                }
+                            }/>
+                        <div className={
+                            `gg-product-body-bullets ${
+                                animateBullets ? 'show' : ''
+                            }`
+                        }>
                             <Bullet text='Lorem Ipsum'/>
                             <Bullet text='Lorem Ipsum'/>
                             <Bullet text='Lorem Ipsum'/>
@@ -100,7 +115,8 @@ export const AboutBlock = () => {
     return (
         <section className='gg-product-about'>
             <div className='gg-product-about-title'>
-                <h2>About <ggred>GG</ggred>
+                <h2>About
+                    <ggred>GG</ggred>
                 </h2>
             </div>
             <div className='gg-product-about-container'>
@@ -144,6 +160,43 @@ export const AboutBlock = () => {
     )
 }
 
+const MoreSection = () => {
+    return (
+        <section className='gg-product-more-section'>
+            <div className='gg-product-more-title'>
+                <h2>More <ggred>GG</ggred></h2>
+                <span>We offer more options ranging from Rash guards to workout plans.</span>
+            </div>
+            <div className='gg-product-content'>
+                <div className='gg-product-card'>
+                    <img src='/images/dummy1.png' alt='arrow'/>
+                    <div className='gg-product-card-body'>
+                        <h2>Our Rash guards</h2>
+                        <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
+                        <div className='gg-product-purchase'>
+                            <img src='/images/arrow.svg' alt='arrow'
+                                draggable={false}/>
+                            <span>Check It Out</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='gg-product-card'>
+                    <img src='/images/dummy2.png' alt='arrow'/>
+                    <div className='gg-product-card-body'>
+                        <h2><ggred>GG</ggred>&apos;s Workout Plan</h2>
+                        <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
+                        <div className='gg-product-purchase'>
+                            <img src='/images/arrow.svg' alt='arrow'
+                                draggable={false}/>
+                            <span>Check It Out</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
 
 function App() {
 
@@ -159,6 +212,8 @@ function App() {
             <AboutBlock/>
             <LineSeperator text="GRAPPLEGUY"
                 right={false}/>
+            <MoreSection/>
+            <Footer/>
         </div>
     )
 }

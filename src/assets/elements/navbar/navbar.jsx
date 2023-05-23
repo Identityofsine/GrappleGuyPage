@@ -13,7 +13,6 @@ function NavBar() {
                 <span>Grapple Gear and Sups.</span>
             </div>
         </div>
-
     </div>
   )
 }
