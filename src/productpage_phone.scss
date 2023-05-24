@@ -402,6 +402,7 @@
 
                 .gg-line-container {
                     margin-top: 2vh;
+                    transition: 125ms all !important;
                 }
 
                 .gg-product-body-bullets {
@@ -411,6 +412,7 @@
                     align-items: flex-start;
                     justify-content: flex-start;
                     gap: 7.64vh !important;
+                    transition: 400ms opacity !important;
                 }
             }
         }

@@ -248,7 +248,7 @@ section.gg-product-ingredients{
                     grid-template-columns: repeat(3, 1fr);  /* Three columns with equal width */
                     gap: 3vh;  /* Gap between grid items */
                     opacity: 0;
-                    transition: $animspeed / 2 opacity;
+                    transition: calc($animspeed / 2) opacity;
                     &.show{
                         opacity: 1;
                     }
