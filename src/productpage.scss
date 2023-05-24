@@ -1,6 +1,6 @@
 @import './var/var.scss';
 @import url('./assets/fonts/futura/futura.scss');
-
+@import "./breakpoints/breakpoints.scss";
 
 
 section.gg-product-page{
@@ -9,6 +9,9 @@ section.gg-product-page{
     // height: 52vh;
     $marginLeft: 1.5vw;
     margin-top: 12vh;
+    @include media('<=laptop'){
+        margin-top: 15vh;
+    }
     
     .gg-product-section-page-container{
         display: flex;
@@ -21,6 +24,9 @@ section.gg-product-page{
             width: 30vw;
             aspect-ratio: 561 / 639;
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), calc(100% - 6vw) 100%, 0 100%);
+            @include media('<=LGlaptop'){
+                width: 32vw;
+            }
         }
         span{
             position: absolute;
@@ -37,6 +43,9 @@ section.gg-product-page{
             z-index: 2;
             bottom:2.3vw;
             right:0.15vw;
+            @include media('<=LGlaptop'){
+                bottom:3.0vw;
+            }
             
         }
         padding-bottom: 1.5vh;
@@ -96,6 +105,12 @@ section.gg-product-page{
             transition: $animspeed height;
             &.show{
                 height: 0.8vh;
+            }
+            @include media('<=MDdesktop'){
+                bottom:1.2vh;
+            }
+            @include media('<=desktop'){
+                bottom: 1vh;
             }
         }
     
@@ -221,6 +236,11 @@ section.gg-product-ingredients{
             .gg-product-body-bullet-container{
                 width: 100%;
                 margin-top: auto;
+                @include media('<=desktop'){
+                    .gg-line-container{
+                        margin-top: 1.7vh;
+                    }
+                }
                 .gg-product-body-bullets{
                     margin-top: 2vh;
                     display: grid;
@@ -232,6 +252,7 @@ section.gg-product-ingredients{
                     &.show{
                         opacity: 1;
                     }
+
                 }
             }
         }
@@ -268,6 +289,15 @@ section.gg-product-about {
                 transform:translateX(-50%);
                 width:97%;
                 background: $accent;
+                @include media('<=MDdesktop'){
+                    bottom: 1vh;
+                }
+                @include media('<=desktop'){
+                    bottom: .5vh;
+                }
+                @include media('<=LGlaptop'){
+                    bottom: .25vh;
+                }
               }
           }
           &::after{
@@ -296,17 +326,17 @@ section.gg-product-about {
         margin-top: 5.5vh;
     }
     .gg-product-about-image-frame{
-        width: 28vw;
-        height: 54.75vh;
+
         padding: 0 6vw;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         box-sizing: border-box;
+
         img{
-            width: 25vw;
-            height: 55vh;
+            width: 20vw;
+            height: auto;
         }
         img.main-gg{
             position: relative;
@@ -369,6 +399,7 @@ section.gg-product-about {
                 width: 170%;
                 background-color: $accent;
                 left:0;
+
             }
             
         }
@@ -389,6 +420,11 @@ section.gg-product-about {
             &.show{
                 line-height: 171.5%;
                 opacity: 1;
+                @include media('<=desktop'){
+                    line-height: 220.5%;
+
+
+                }
             }
         }
         .gg-prdouct-about-accentline-body{
@@ -409,15 +445,27 @@ section.gg-product-about {
                 display: grid;
                 grid-template-rows: repeat(4, 2fr);  /* Two rows with equal height */
                 grid-template-columns: repeat(2, 2fr);  /* Three columns with equal width */
-                gap: 23px;  /* Gap between grid items */
+                gap: 5vh;  /* Gap between grid items */
                 justify-items: start;
                 // width: 40%;
+                @include media("<=desktop"){
+                    gap:4vh;
+                }
+                @include media("<=LGlaptop"){
+                    gap:2.2vh;
+                }
+                @include media("<=laptop"){
+                    gap:2vh;
+                }
 
             }
             .gg-product-purchase{
                 margin:0;
                 width: fit-content;
                 margin-right: 5vh;
+                @include media("<=desktop"){
+                    margin-right: 0;
+                }
                 img{
                     width: 5vw;
                 }
@@ -459,6 +507,9 @@ section.gg-product-more-section{
                   transform:translateX(-50%);
                   width:97%;
                   background: $accent;
+                  @include media('<=desktop'){
+                    bottom: .6vh;
+                  }
                 }
             }
         }
@@ -473,6 +524,10 @@ section.gg-product-more-section{
             -webkit-text-fill-color: transparent;
             opacity: .8;
             margin-top: 2vh;
+            @include media('<=desktop'){
+                margin-top: 1vh;
+            }
+            
         }
         &::after{
             content: '';
@@ -499,13 +554,23 @@ section.gg-product-more-section{
         margin-top: 5vh;
         gap:5.9vh;
 
+        @include media('<=desktop'){
+            gap:1.5vh;
+        }
+
+
         .gg-product-card{
             display: flex;
             gap:3.8vh;
             position: relative;
             img.icon{
                 width:22.55vw;
-                height: 34.62vh;
+                height: 22.55vw;
+                aspect-ratio: 1;
+                @include media('<=MDdesktop'){
+                    width:22.5vw;
+                    height: 22.5vw;
+                }
             }
             &._B{
                 &::before{
@@ -537,7 +602,7 @@ section.gg-product-more-section{
                     font-family: 'Futura PT';
                     font-style: normal;
                     font-weight: 600;
-                    font-size: 3.6vw;
+                    font-size: 3.8vw;
                     line-height: 100%;
                     ggred {
                         position: relative;
@@ -568,6 +633,13 @@ section.gg-product-more-section{
                     -webkit-text-fill-color: transparent;
                     opacity: .85;
                     margin-top: 1.2vh;
+
+                    @include media('<=desktop'){
+                        font-size: 2.75vh;
+                    }
+                    @include media("<=LGlaptop"){
+                        font-size: 2.5vh;
+                    }
                 }
                 .gg-product-purchase{
                     margin-top: 0;
@@ -591,8 +663,11 @@ section.gg-product-more-section{
         font-style: normal;
         font-weight: 500;
         font-size: 1.4vw;
-        line-height: 153.5%;
+        line-height: 100.0%;
         opacity: .7;
+        @include media('<=desktop'){
+            font-size: 1.5vw;
+        }
     }
     .gg-bullet-block{
         width: 1.30vw;
@@ -612,6 +687,7 @@ section.gg-product-more-section{
     margin-left: 90%;
     cursor: pointer;
     transition: 900ms transform;
+
     img{
         width: 4vw;
         aspect-ratio: 77.25 / 80.25;
@@ -624,6 +700,7 @@ section.gg-product-more-section{
         font-weight: 700;
         font-size: 1.4vw;
         user-select: none;
+
     }
     &:hover{
         transform: scale(1.08);

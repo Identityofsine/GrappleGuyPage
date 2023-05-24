@@ -25,3 +25,30 @@
         }
     }
 }
+
+
+@include media('<=LGtablet') {
+    footer{
+        margin-top: 3vh;
+        #gg-footer-container{
+            .logo{
+                margin-top: 1.5vh;
+                gap:2.5vw;
+                .logo-placeholder{
+                    width: 22vw;
+                    height: auto;
+                    aspect-ratio: 1;
+                }
+                .logo-text-container{
+                    h2{
+                        font-size: 6vw;
+                    }
+                    span{
+                        font-size: 2.5vw;
+                        margin-left: .4vw;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,15 +9,6 @@ import Footer from './assets/elements/footer/footer'
 
 
 export const ProductSection = () => {
-    const windowSize = useRef([window.innerWidth, window.innerHeight]);
-
-    useEffect(() => {
-        useAnimationHook({
-            className: '_A',
-            ignoreclassName: '_B',
-            threshold: windowSize.current[0] > 820 ? .5 : .4
-        });
-    }, [])
 
     return (
         <section className='gg-product-page'
@@ -199,6 +190,16 @@ const MoreSection = () => {
 
 
 function App() {
+
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
+    useEffect(() => {
+        useAnimationHook({
+            className: '_A',
+            ignoreclassName: '_B',
+            threshold: windowSize.current[0] > 820 ? .7 : .1
+        });
+    }, [])
 
     return (
         <div className='gg-app-wrapper'>

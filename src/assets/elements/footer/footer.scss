@@ -1,3 +1,6 @@
+@import "../../../breakpoints/breakpoints.scss";
+@import url("../../fonts/futura/futura.scss");
+
 footer{
     width: 100%;
     margin-top: 3.42vh;
@@ -8,6 +11,7 @@ footer{
         align-items: center;
         justify-content: flex-start;
         text-align: left;
+
         .logo{
             margin-top: 4.305vh;
             display: flex;
@@ -15,9 +19,20 @@ footer{
             justify-content: flex-start;
             gap:.8vw;
             color:black;
+            @include media("<=MDdesktop"){
+                margin-top: 2vh;
+            }
             .logo-placeholder{
                 width: 5vw;
                 height: 5vw;
+                @include media("<=desktop"){
+                    width:7vw;
+                    height: 7vw;
+                }
+                @include media("<=laptop"){
+                    width:8.5vw;
+                    height: 8.5vw;
+                }
                 background-color: #000000;
             }
             .logo-text-container{
@@ -32,10 +47,22 @@ footer{
                     font-size: 1.7vw;
                     line-height: 100%;
                     font-family: 'Futura';
+                    @include media("<=desktop"){
+                        font-size: 2.4vw;
+                    }
+                    @include media("<=laptop"){
+                        font-size: 3vw;
+                    }
                 }
                 span{
                     display: block;
                     font-size: .7vw;
+                    @include media("<=desktop"){
+                        font-size: 1vw;
+                    }
+                    @include media("<=laptop"){
+                        font-size: 1.5vw;
+                    }
                 }
             }
         }

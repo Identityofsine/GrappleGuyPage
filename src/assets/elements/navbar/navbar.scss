@@ -1,6 +1,5 @@
-
-
-@import "../../fonts/futura/futura.scss";
+@import "../../../breakpoints/breakpoints.scss";
+@import url("../../fonts/futura/futura.scss");
 
 #grapple-guy-navbar{
     position: absolute;
@@ -12,7 +11,12 @@
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-
+    @include media("<=desktop"){
+        width: 95.99%;
+    }
+    @include media("<=laptop"){
+        width: 95.94%;
+    }
     .logo{
         display: flex;
         align-items: flex-start;
@@ -22,6 +26,14 @@
         .logo-placeholder{
             width: 5vw;
             height: 5vw;
+            @include media("<=desktop"){
+                width:7vw;
+                height: 7vw;
+            }
+            @include media("<=laptop"){
+                width:8.5vw;
+                height: 8.5vw;
+            }
             background-color: #000000;
         }
         .logo-text-container{
@@ -36,10 +48,22 @@
                 font-size: 1.7vw;
                 line-height: 100%;
                 font-family: 'Futura';
+                @include media("<=desktop"){
+                    font-size: 2.4vw;
+                }
+                @include media("<=laptop"){
+                    font-size: 3vw;
+                }
             }
             span{
                 display: block;
                 font-size: .7vw;
+                @include media("<=desktop"){
+                    font-size: 1vw;
+                }
+                @include media("<=laptop"){
+                    font-size: 1.5vw;
+                }
             }
         }
     }

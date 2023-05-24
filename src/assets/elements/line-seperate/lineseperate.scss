@@ -1,9 +1,13 @@
 @import "../../../var/var.scss";
+@import "../../../breakpoints/breakpoints.scss";
 
 .gg-line-container{
     width: 100%;
     position: relative;
     margin-top: 6vh;
+    @include media('<=LGlaptop'){
+        margin-top: 1vh;
+    }
     .gg-text{
         text-align: left;
         font-size: 2.4vh;
