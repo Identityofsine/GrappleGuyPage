@@ -23,13 +23,12 @@ export const ProductSection = () => {
                 <div className='gg-product-page-content'>
                     <div className='gg-product-page-title'>
                         <h2>
-                            <ggred>GRAPPLE GUY’S</ggred> CUTTING MIX
-                            <span>2nd Revision</span>
+                            <ggred>GRAPPLE GUY’S</ggred> GRAPPLE GEAR<span>2nd Revision</span>
                         </h2>
                         <div className='gg-product-red-bar _B'/>
                     </div>
                     <p className='_B'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Duis est metus, laoreet sit amet lectus vel, porta consectetur magna. Pellentesque lobortis scelerisque arcu quis pulvinar. Aenean feugiat pellentesque quam, non mollis ipsum viverra ut. Suspendisse sed nunc sapien.
+                        Grapple Gear is the newest game-changer for you or your favorite martial artist. The highest level of athletes does whatever it takes to win. This may mean doing that extra rep in the gym or preparing for competition a certain way. Starting today, it means implementing our formula into your current training regimen.
                     </p>
                 </div>
 
@@ -69,7 +68,10 @@ export const Ingredients = () => { // temporarily used, only for pages that cont
                     <img src="/images/supfacts.png" alt='Nutrition Facts'/>
                 </div>
                 <div className='gg-product-body'>
-                    <span className='gg-body _B'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus. Proin id tellus vel tortor sagittis rutrum at eu orci. Nam iaculis arcu nec nisi scelerisque</span>
+                    <span className='gg-body _B'>Grapple Gear is more like a nootropic (mental enhancement) than a conventional &quot;pre-workout.&quot; It gives you the ability to be the best version of yourself in training or competition. <br/><i>(bullet points bellow)</i>
+                        
+                    
+                    &nbsp;<br/><br/>Grapple Gear includes a carefully put-together formula that provides you with energy, focus, and fatigue management. So, if you&apos;re looking to bring your game to the next level, buy our formula today.</span>
                     <div className='gg-product-body-bullet-container'>
                         <LineSeperator text='SUMMED UP'
                             animated={
@@ -122,7 +124,7 @@ export const AboutBlock = () => {
                         Our Brand
                         <div className='gg-product-about-accentline'/>
                     </h2>
-                    <p className='_B'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu. Nam iaculis arcu nec nisi scelerisque, ullamcorper fringilla justo dapibus.
+                    <p className='_B'>Grapple Guy is a brand for martial artists of all kinds. We offer supplements to improve your mental game, a grappler-specific workout plan to enhance your physical game, and some super slick merchandise with our signature logo to elevate your style game! If you&apos;re a serious martial artist dedicated to your craft, we have something for you.
                     </p>
                     <div className='gg-prdouct-about-accentline-body'/>
 
@@ -155,7 +157,8 @@ const MoreSection = () => {
     return (
         <section className='gg-product-more-section'>
             <div className='gg-product-more-title _B'>
-                <h2>MORE <ggred>GG</ggred></h2>
+                <h2>MORE <ggred>GG</ggred>
+                </h2>
                 <span>We offer more options ranging from Rash guards to workout plans.</span>
             </div>
             <div className='gg-product-content'>
@@ -163,7 +166,7 @@ const MoreSection = () => {
                     <img src='/images/dummy1.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2>Our Rash guards</h2>
-                        <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
+                        <span className='gg-pc-span'>Elevate your training experience with our premium rash guards, available in classic white or sleek black, adorned with the iconic Grapple Guy logo. Designed for both style and functionality, these high-quality rash guards are the epitome of performance and durability.</span>
                         <div className='gg-product-purchase'>
                             <img src='/images/arrow.svg' alt='arrow'
                                 draggable={false}/>
@@ -174,11 +177,12 @@ const MoreSection = () => {
                 <div className='gg-product-card _B'>
                     <img src='/images/dummy2.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
-                        <h2><ggred>GG</ggred>&apos;s Workout Plan</h2>
-                        <span className='gg-pc-span'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut velit ut justo commodo rutrum. Phasellus ultrices facilisis arcu, in dignissim mauris rhoncus ac. Praesent at justo massa. Quisque quis sapien ac diam pulvinar egestas ac at arcu.</span>
+                        <h2>
+                            <ggred>GG</ggred>&apos;s Workout Plan</h2>
+                        <span className='gg-pc-span'>Are you an aspiring grappler looking to take your skills to new heights? Our specially crafted workout plan is tailored to meet the unique demands of grapplers at any level, empowering you to unleash your full potential on the mats.</span>
                         <div className='gg-product-purchase'>
                             <img src='/images/arrow.svg' alt='arrow'
-                                draggable={false} />
+                                draggable={false}/>
                             <span>Check It Out</span>
                         </div>
                     </div>
