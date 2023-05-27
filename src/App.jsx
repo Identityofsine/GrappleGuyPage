@@ -201,7 +201,7 @@ function App() {
         useAnimationHook({
             className: '_A',
             ignoreclassName: '_B',
-            threshold: windowSize.current[0] > 820 ? .7 : .1
+            threshold: windowSize.current[0] > 960 ? .7 : .15
         });
     }, [])
 
