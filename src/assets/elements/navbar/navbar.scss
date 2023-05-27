@@ -26,7 +26,7 @@
         .logo-placeholder{
             width: 5vw;
             height: 5vw;
-            @include media("<=desktop"){
+            @include media("<=MDdesktop"){
                 width:7vw;
                 height: 7vw;
             }
@@ -48,7 +48,7 @@
                 font-size: 1.7vw;
                 line-height: 100%;
                 font-family: 'Futura';
-                @include media("<=desktop"){
+                @include media("<=MDdesktop"){
                     font-size: 2.4vw;
                 }
                 @include media("<=laptop"){
@@ -58,7 +58,7 @@
             span{
                 display: block;
                 font-size: .7vw;
-                @include media("<=desktop"){
+                @include media("<=MDdesktop"){
                     font-size: 1vw;
                 }
                 @include media("<=laptop"){

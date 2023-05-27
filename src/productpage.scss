@@ -8,7 +8,11 @@ section.gg-product-page {
     width: 100%;
     // height: 52vh;
     $marginLeft: 1.5vw;
-    margin-top: 12vh;
+    margin-top: 15vh;
+
+    @include media('<=MDdesktop'){
+        margin-top: 22vh;
+    }
 
     @include media('<=laptop') {
         margin-top: 15vh;
@@ -272,7 +276,7 @@ section.gg-product-ingredients {
 
                 @include media('<=desktop') {
                     .gg-line-container {
-                        margin-top: 1.7vh;
+                        margin-top: 2vh;
                     }
                 }
 
