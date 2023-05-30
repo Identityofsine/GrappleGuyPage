@@ -70,7 +70,7 @@ section.gg-product-page {
             left: 0;
             z-index: 3;
             background: $bglinear;
-            transition: $animspeed / 1.25 width, $animspeed height, $animspeed border-top-right-radius, $animspeed border-top-left-radius;
+            transition: calc($animspeed / 1.25) width, $animspeed height, $animspeed border-top-right-radius, $animspeed border-top-left-radius;
             transition-timing-function: ease-in-out;
             border-top-right-radius: 0%;
             border-top-left-radius: 0%;
@@ -356,7 +356,7 @@ section.gg-product-about {
             width: 100%;
             height: calc(100% + .4vh);
             background: $bglinear;
-            transition: $animspeed / 1.2 width;
+            transition: calc($animspeed / 1.2) width;
             z-index: 4;
             left: 0;
             bottom: -.4vh;
