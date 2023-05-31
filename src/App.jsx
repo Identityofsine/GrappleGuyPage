@@ -90,12 +90,12 @@ export const Ingredients = () => { // temporarily used, only for pages that cont
                                 animateBullets ? 'show' : ''
                             }`
                         }>
-                            <Bullet text='Lorem Ipsum'/>
-                            <Bullet text='Lorem Ipsum'/>
-                            <Bullet text='Lorem Ipsum'/>
-                            <Bullet text='Lorem Ipsum'/>
-                            <Bullet text='Lorem Ipsum'/>
-                            <Bullet text='Lorem Ipsum'/>
+                            <Bullet text='L-Theanine (Mental Enhancement)'/>
+                            <Bullet text='Beta-Alanine (Endurance & Fatigue Management)'/>
+                            <Bullet text='Caffeine (Energy & Energy)'/>
+                            <Bullet text='Bacopa (Stress Management*)'/>
+                            <Bullet text='L-Tyrosine (Focus)'/>
+                            {/* <Bullet text='Lorem Ipsum'/> */}
                         </div>
                     </div>
                 </div>
@@ -130,14 +130,13 @@ export const AboutBlock = () => {
 
                     <div className='gg-product-about-bullet-container'>
                         <div className='gg-product-about-bullets'>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
-                            <Bullet text='Lorem ipsum dolor sit amet'/>
+                            <Bullet text='Specialized Supplements'/>
+                            <Bullet text='Premium Merchandise'/>
+                            <Bullet text='High Level Workout Plans'/>
+                            <Bullet text='For MMA/Martial Arts Fans'/>
+                            <Bullet text='By Martial Artists'/>
+                            <Bullet text='For Martial Artists'/>
+
 
                         </div>
                         <div className='gg-product-purchase'>

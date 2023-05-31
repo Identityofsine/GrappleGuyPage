@@ -190,11 +190,14 @@
                     .gg-product-about-bullets {
                         display: flex !important;
                         flex-direction: column;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: center;
                         gap: 5vh !important;
                         margin-top: 6vh !important;
 
+                    }
+                    .gg-purchase{
+                        margin-right: 8vw !important;
                     }
                 }
             }
@@ -273,6 +276,7 @@
 
         .gg-bullet-block {
             width: 25px;
+            height: 25px;
         }
     }
 
@@ -472,13 +476,15 @@
                     flex-direction: column;
                     justify-content: flex-start !important;
                     align-items: flex-start;
-                    gap: 2vh;
+                    gap: 2.01vh;
 
                     .gg-product-about-bullets {
                         display: flex !important;
                         flex-direction: column;
                         gap: 7.64vh !important;
-                        
+                    }
+                    .gg-purchase{
+                        margin-right: 8vw !important;
                     }
                 }
             }
@@ -556,6 +562,7 @@
 
         .gg-bullet-block {
             width: 25px;
+            height: 25px;
         }
     }
 
