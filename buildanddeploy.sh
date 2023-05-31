@@ -36,7 +36,7 @@ function run_init() {
     echo -e "\nMoving into $dir for a second";
     cd $dir;
     echo -e "\nRunning Git Reset"
-    git reset --hard origin/main
+    git reset --hard origin/deploy
     git pull
     echo -e "\nGoing back to $curDIR";
     cd $curDIR

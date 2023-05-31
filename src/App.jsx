@@ -10,6 +10,7 @@ import Footer from './assets/elements/footer/footer'
 
 export const ProductSection = () => {
 
+
     return (
         <section className='gg-product-page'
             style={
@@ -17,7 +18,7 @@ export const ProductSection = () => {
         }>
             <div className='gg-product-section-page-container'>
                 <div className='gg-product-page-image _A'>
-                    <img src='/images/example-sup-picture.png' alt='Icon'/>
+                    <img src='images/example-sup-picture.png' alt='Icon'/>
                     <span>$65.99*</span>
                 </div>
                 <div className='gg-product-page-content'>
@@ -35,7 +36,7 @@ export const ProductSection = () => {
             </div>
             <div className='gg-product-purchase'
                 draggable={false}>
-                <img src='/images/arrow.svg' alt='arrow'
+                <img src='images/arrow.svg' alt='arrow'
                     draggable={false}/>
                 <span>Purchase</span>
             </div>
@@ -65,10 +66,10 @@ export const Ingredients = () => { // temporarily used, only for pages that cont
             <h2 className='_A'>INGREDIENTS</h2>
             <div className='gg-product-container'>
                 <div className='gg-product-image-container'>
-                    <img src="/images/supfacts.png" alt='Nutrition Facts'/>
+                    <img src="images/supfacts.png" alt='Nutrition Facts'/>
                 </div>
                 <div className='gg-product-body'>
-                    <span className='gg-body _B'>Grapple Gear is more like a nootropic (mental enhancement) than a conventional &quot;pre-workout.&quot; It gives you the ability to be the best version of yourself in training or competition. <br/><i>(bullet points bellow)</i>
+                    <span className='gg-body _B'>Grapple Gear is more like a nootropic (mental enhancement) than a conventional &quot;pre-workout.&quot; It gives you the ability to be the best version of yourself in training or competition. <br/><i>(bullet points bellow.)</i>
                         
                     
                     &nbsp;<br/><br/>Grapple Gear includes a carefully put-together formula that provides you with energy, focus, and fatigue management. So, if you&apos;re looking to bring your game to the next level, buy our formula today.</span>
@@ -114,9 +115,9 @@ export const AboutBlock = () => {
             </div>
             <div className='gg-product-about-container'>
                 <div className='gg-product-about-image-frame _B'>
-                    <img src='/images/graappleguy_man.svg' alt="grappleguy" className='main-gg'/>
-                    <img src='/images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg left'/>
-                    <img src='/images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg right'/>
+                    <img src='images/graappleguy_man.svg' alt="grappleguy" className='main-gg'/>
+                    <img src='images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg left'/>
+                    <img src='images/grappleguy_alt.svg' alt="grappleguy" className='alt-gg right'/>
 
                 </div>
                 <div className='gg-product-about-body'>
@@ -140,7 +141,7 @@ export const AboutBlock = () => {
 
                         </div>
                         <div className='gg-product-purchase'>
-                            <img src='/images/arrow.svg' alt='arrow'
+                            <img src='images/arrow.svg' alt='arrow'
                                 draggable={false}/>
                             <span>Check It Out</span>
                         </div>
@@ -162,25 +163,25 @@ const MoreSection = () => {
             </div>
             <div className='gg-product-content'>
                 <div className='gg-product-card _B'>
-                    <img src='/images/dummy1.png' alt='arrow' className='icon'/>
+                    <img src='images/dummy1.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2>Our Rash guards</h2>
                         <span className='gg-pc-span'>Elevate your training experience with our premium rash guards, available in classic white or sleek black, adorned with the iconic Grapple Guy logo. Designed for both style and functionality, these high-quality rash guards are the epitome of performance and durability.</span>
                         <div className='gg-product-purchase'>
-                            <img src='/images/arrow.svg' alt='arrow'
+                            <img src='images/arrow.svg' alt='arrow'
                                 draggable={false}/>
                             <span>Check It Out</span>
                         </div>
                     </div>
                 </div>
                 <div className='gg-product-card _B'>
-                    <img src='/images/dummy2.png' alt='arrow' className='icon'/>
+                    <img src='images/dummy2.png' alt='arrow' className='icon'/>
                     <div className='gg-product-card-body'>
                         <h2>
                             <ggred>GG</ggred>&apos;s Workout Plan</h2>
                         <span className='gg-pc-span'>Are you an aspiring grappler looking to take your skills to new heights? Our specially crafted workout plan is tailored to meet the unique demands of grapplers at any level, empowering you to unleash your full potential on the mats.</span>
                         <div className='gg-product-purchase'>
-                            <img src='/images/arrow.svg' alt='arrow'
+                            <img src='images/arrow.svg' alt='arrow'
                                 draggable={false}/>
                             <span>Check It Out</span>
                         </div>
